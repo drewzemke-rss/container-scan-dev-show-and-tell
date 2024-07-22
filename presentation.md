@@ -36,14 +36,49 @@ RSS Dev Show & Tell
 
 ## How?
 
-  - create an action in your repo
-  - including in pipeline
-  - how to diagnose vulnerabilities
+  - first, remove `snyk` from your pipeline 
 
-- mention `rss-actions` at end, before breakout groups. like, check these out!
+### Include Container Scan in Your Pipeline
+
+```yaml
+- code snippet!
+```
+
+### Create a Scheduled Action in Your Repo
+
+```yaml
+- code snippet!
+```
+
+### Diagnosing Vulnerabilities
+  (*in browser example*)
+
+---
+
+## RSS Actions
+
+
+
+
+---
+
+## Breakout Rooms
+
+Go!
+
+--- 
+
+## Conclusion
+
+Need help? Post in `#developers` :P
+
+--- 
+
+ - mention `rss-actions` at end, before breakout groups. like, check these out!
   - smoke test 
   - retag and deploy
   - container scan (obv)
 
+#### general outline, don't actually include
 - breakout groups (with teams? ask Aya)
 
