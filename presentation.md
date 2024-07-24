@@ -10,31 +10,34 @@ RSS Dev Show & Tell
 
 ---
 
-## What?
+## What is Container Scanning?
 
-  - what is container scanning?
-    - scans your docker server image
-    - uploads results to a panel in Github
-    - we use an open-source tool called `trivy`
-  - the goal is to catch vulnerabilities introduced by
-    - `pnpm`
+  - the goal is to catch vulnerabilities introduced by:
     - the base docker image
-    - other non-TypeScript dependencies that you use in your docker image
+    - other non-TypeScript dependencies that you use in your docker image (eg. `pnpm`)
+   <br/>
+  - we created a GitHub action that:
+    - scans your docker server image
+    - uses an open-source tool called `trivy`
+    - uploads results to a panel in Github   
 
 ---
 
-## Why?
+## Why Container Scan?
 
   - we're no longer using `snyk`; its functionality has been replaced by:
-    - Dependabot
-    - GH Advanced Security
-    - this container scan action 
-  - centralized reporting of security vulnerabilities (*show browser*)
-  - benefits for our Ops team
+    - Dependabot (TS/JS dependency versions)
+    - GH Advanced Security (static security analysis, incl. secret scanning)
+    - **this container scan action**
+   <br/>
+  - centralized reporting of security vulnerabilities (*demo*)
+   <br/>
+  - benefits for our Ops/Security folks
+    - provides flexibility for auditing containers running in different environments
 
 ---
 
-## How?
+## How Does One Container Scan?
 
   - first, remove `snyk` from your pipeline 
 
@@ -44,41 +47,39 @@ RSS Dev Show & Tell
 - code snippet!
 ```
 
+---
+
+## How Does One Container Scan?
 ### Create a Scheduled Action in Your Repo
 
 ```yaml
 - code snippet!
 ```
-
-### Diagnosing Vulnerabilities
-  (*in browser example*)
-
 ---
 
-## RSS Actions
+## How Does One Container Scan?
+### Diagnosing Vulnerabilities
 
-
-
+- the most common sources of issues are:
+  - your base docker image
+  - `pnpm`  
+  <br>
+- share your issues/solutions in `#developers`!
 
 ---
 
 ## Breakout Rooms
 
-Go!
+Go put the container scan in your project(s)!
 
---- 
+---
 
 ## Conclusion
 
-Need help? Post in `#developers` :P
-
---- 
-
- - mention `rss-actions` at end, before breakout groups. like, check these out!
+- Need help? Post in `#developers`
+  <br>
+- RSS Actions exists and is good. Check these out in the `rss-actions` repo!
   - smoke test 
   - retag and deploy
-  - container scan (obv)
-
-#### general outline, don't actually include
-- breakout groups (with teams? ask Aya)
-
+  - container scan 
+  - ... *more to come* :)
