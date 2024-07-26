@@ -16,7 +16,7 @@ RSS Dev Show & Tell
 - the goal is to catch vulnerabilities introduced by:
   - the base docker image
   - other non-TypeScript dependencies that you use in your docker image (eg. `pnpm`)
- <br/>
+   <br/>
 - we created a GitHub action that:
   - scans your docker server image
   - uses an open-source tool called `trivy`
@@ -30,9 +30,9 @@ RSS Dev Show & Tell
   - Dependabot (TS/JS dependency versions)
   - GH Advanced Security (static security analysis, incl. secret scanning)
   - **this container scan action**
- <br/>
+   <br/>
 - centralized reporting of security vulnerabilities (*demo*)
- <br/>
+   <br/>
 - benefits for our Ops/Security folks
   - provides flexibility for auditing containers running in different environments
 
