@@ -53,12 +53,12 @@ container_scan:
     - name: Container Scan
       uses: risk-and-safety/rss-actions/actions/container-scan@v2
       with:
-        image: ghcr.io/risk-and-safety/core-demo/server:latest
-        category: 'core-demo'
+        image: ghcr.io/risk-and-safety/<APP-NAME>/server:latest
+        name: '<APP-NAME>'
+        slack-channel-id: '#my-slack-channel'
+        slack-bot-token: ${{ secrets.SLACK_BOT_TOKEN }}
         github-docker-password: ${{ secrets.RSS_SVC_GITHUB_DOCKER_PASSWORD }}
         github-actor: ${{ github.actor }}
-        slack-channel-id: '#dt-im-broke'
-        slack-bot-token: ${{ secrets.SLACK_BOT_TOKEN }}
 ```
 
 ---
@@ -82,12 +82,12 @@ jobs:
       - name: Container Scan
         uses: risk-and-safety/rss-actions/actions/container-scan@v2
         with:
-          image: ghcr.io/risk-and-safety/core-demo/server:latest
-          category: 'core-demo'
+          image: ghcr.io/risk-and-safety/<APP-NAME>/server:latest
+          name: '<APP-NAME>'
+          slack-channel-id: '#my-slack-channel'
+          slack-bot-token: ${{ secrets.SLACK_BOT_TOKEN }}
           github-docker-password: ${{ secrets.RSS_SVC_GITHUB_DOCKER_PASSWORD }}
           github-actor: ${{ github.actor }}
-          slack-channel-id: '#dt-im-broke'
-          slack-bot-token: ${{ secrets.SLACK_BOT_TOKEN }}
 ```
 
 ---
