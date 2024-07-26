@@ -51,7 +51,7 @@ container_scan:
   runs-on: ubuntu-latest
   steps:
     - name: Container Scan
-      uses: risk-and-safety/rss-actions/actions/container-scan@trunk
+      uses: risk-and-safety/rss-actions/actions/container-scan@v2
       with:
         image: ghcr.io/risk-and-safety/core-demo/server:latest
         category: 'core-demo'
@@ -80,7 +80,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Container Scan
-        uses: risk-and-safety/rss-actions/actions/container-scan@trunk
+        uses: risk-and-safety/rss-actions/actions/container-scan@v2
         with:
           image: ghcr.io/risk-and-safety/core-demo/server:latest
           category: 'core-demo'
