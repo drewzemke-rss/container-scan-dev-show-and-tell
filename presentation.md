@@ -45,7 +45,20 @@ RSS Dev Show & Tell
 ### Include Container Scan in Your Pipeline
 
 ```yaml
-- code snippet!
+container_scan:
+  needs: [server]
+  name: Container Security Scan
+  runs-on: ubuntu-latest
+  steps:
+    - name: Container Scan
+      uses: risk-and-safety/rss-actions/actions/container-scan@trunk
+      with:
+        image: ghcr.io/risk-and-safety/core-demo/server:latest
+        category: 'core-demo'
+        github-docker-password: ${{ secrets.RSS_SVC_GITHUB_DOCKER_PASSWORD }}
+        github-actor: ${{ github.actor }}
+        slack-channel-id: '#dt-im-broke'
+        slack-bot-token: ${{ secrets.SLACK_BOT_TOKEN }}
 ```
 
 ---
@@ -55,7 +68,26 @@ RSS Dev Show & Tell
 ### Create a Scheduled Action in Your Repo
 
 ```yaml
-- code snippet!
+name: Daily Container Security Scan
+
+on:
+  schedule:
+    - cron: '0 14 * * *'
+
+jobs:
+  container_scan:
+    name: Container Security Scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Container Scan
+        uses: risk-and-safety/rss-actions/actions/container-scan@trunk
+        with:
+          image: ghcr.io/risk-and-safety/core-demo/server:latest
+          category: 'core-demo'
+          github-docker-password: ${{ secrets.RSS_SVC_GITHUB_DOCKER_PASSWORD }}
+          github-actor: ${{ github.actor }}
+          slack-channel-id: '#dt-im-broke'
+          slack-bot-token: ${{ secrets.SLACK_BOT_TOKEN }}
 ```
 
 ---
