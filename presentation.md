@@ -6,40 +6,41 @@ paging: Slide %d / %d
 ---
 
 # Container Scanning and You
-RSS Dev Show & Tell 
+
+RSS Dev Show & Tell
 
 ---
 
 ## What is Container Scanning?
 
-  - the goal is to catch vulnerabilities introduced by:
-    - the base docker image
-    - other non-TypeScript dependencies that you use in your docker image (eg. `pnpm`)
-   <br/>
-  - we created a GitHub action that:
-    - scans your docker server image
-    - uses an open-source tool called `trivy`
-    - uploads results to a panel in Github   
+- the goal is to catch vulnerabilities introduced by:
+  - the base docker image
+  - other non-TypeScript dependencies that you use in your docker image (eg. `pnpm`)
+ <br/>
+- we created a GitHub action that:
+  - scans your docker server image
+  - uses an open-source tool called `trivy`
+  - uploads results to a panel in Github
 
 ---
 
 ## Why Container Scan?
 
-  - we're no longer using `snyk`; its functionality has been replaced by:
-    - Dependabot (TS/JS dependency versions)
-    - GH Advanced Security (static security analysis, incl. secret scanning)
-    - **this container scan action**
-   <br/>
-  - centralized reporting of security vulnerabilities (*demo*)
-   <br/>
-  - benefits for our Ops/Security folks
-    - provides flexibility for auditing containers running in different environments
+- we're no longer using `snyk`; its functionality has been replaced by:
+  - Dependabot (TS/JS dependency versions)
+  - GH Advanced Security (static security analysis, incl. secret scanning)
+  - **this container scan action**
+ <br/>
+- centralized reporting of security vulnerabilities (*demo*)
+ <br/>
+- benefits for our Ops/Security folks
+  - provides flexibility for auditing containers running in different environments
 
 ---
 
 ## How Does One Container Scan?
 
-  - first, remove `snyk` from your pipeline 
+- first, remove `snyk` from your pipeline
 
 ### Include Container Scan in Your Pipeline
 
@@ -50,14 +51,17 @@ RSS Dev Show & Tell
 ---
 
 ## How Does One Container Scan?
+
 ### Create a Scheduled Action in Your Repo
 
 ```yaml
 - code snippet!
 ```
+
 ---
 
 ## How Does One Container Scan?
+
 ### Diagnosing Vulnerabilities
 
 - the most common sources of issues are:
@@ -79,7 +83,7 @@ Go put the container scan in your project(s)!
 - Need help? Post in `#developers`
   <br>
 - RSS Actions exists and is good. Check these out in the `rss-actions` repo!
-  - smoke test 
+  - smoke test
   - retag and deploy
-  - container scan 
+  - container scan
   - ... *more to come* :)
