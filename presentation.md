@@ -72,7 +72,7 @@ name: Daily Container Security Scan
 
 on:
   schedule:
-    - cron: '0 14 * * *'
+    - cron: '0 14 * * 1'
 
 jobs:
   container_scan:
