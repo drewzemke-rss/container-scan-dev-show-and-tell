@@ -21,22 +21,25 @@
     "bold": true
   },
   "h1": {
-    "prefix": "# "
+    "prefix": "▓▓▓ ",
+    "color": "#bd93f9"
   },
   "h2": {
-    "prefix": "## "
+    "prefix": "▓▓▓▓ ",
+    "color": "#ff79c6"
   },
   "h3": {
-    "prefix": "### "
+    "prefix": "▓▓▓▓▓ ",
+    "color": "#ffb86c"
   },
   "h4": {
-    "prefix": "#### "
+    "prefix": "▓▓▓▓▓▓ "
   },
   "h5": {
-    "prefix": "##### "
+    "prefix": "▓▓▓▓▓▓▓ "
   },
   "h6": {
-    "prefix": "###### "
+    "prefix": "▓▓▓▓▓▓▓▓ "
   },
   "text": {},
   "strikethrough": {
@@ -84,7 +87,6 @@
     "color": "#50fa7b"
   },
   "code_block": {
-    "color": "#ffb86c",
     "margin": 2,
     "chroma": {
       "text": {

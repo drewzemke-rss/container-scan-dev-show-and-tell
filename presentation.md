@@ -2,7 +2,7 @@
 author: Alex and Drew,
 date: July 29, 2024
 paging: Slide %d / %d
-<!-- theme: ./themes/catppuccin-mocha.json -->
+theme: ./themes/dracula.json
 ---
 
 # Container Scanning and You
