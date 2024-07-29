@@ -18,8 +18,8 @@ RSS Dev Show & Tell
   - other non-TypeScript dependencies that you use in your docker image (eg. `pnpm`)
    <br/>
 - we created a GitHub action that:
-  - scans your docker server image
   - uses an open-source tool called `trivy`
+  - scans your docker server image
   - uploads results to a panel in Github
 
 ---
