@@ -68,7 +68,7 @@ container_scan:
 ### Create a Scheduled Action in Your Repo
 
 ```yaml
-name: Daily Container Security Scan
+name: Weekly Container Security Scan
 
 on:
   schedule:
